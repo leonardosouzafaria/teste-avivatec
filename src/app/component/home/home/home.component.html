@@ -1,0 +1,247 @@
+<header class="container">
+  <div class="navbar-fixed">
+    <div class="aviso">
+      <span class=" hide-on-med-and-down white-text center-align">Não cobramos nenhum valor de nossos clientes pelo
+        serviço prestado,
+        portanto <span class="text-uppercase">nunca</span>
+        nenhum depósito ou pagamento antecipado para obter seu empréstimo</span>
+    </div>
+  </div>
+
+  <nav class="header">
+    <div class="nav-wrapper">
+      <div class="row">
+        <div class="col m3">
+          <a href="#!" class="brand-logo"><img src="assets/img/logo.png" alt="Logo" class="logo"></a>
+        </div>
+        <div class="col m6">
+          <a data-target="mobile-demo" class="sidenav-trigger" (click)="abrirMenu()"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="">Sobre nós</a></li>
+            <li><a href="">Como funciona</a></li>
+            <li><a href="">Precisa de ajuda?</a></li>
+            <li><a href="">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="">Sobre nós</a></li>
+    <li><a href="">Como funciona</a></li>
+    <li><a href="">Precisa de ajuda?</a></li>
+    <li><a href="">Login</a></li>
+  </ul>
+</header>
+
+<main class="container">
+  <div class="row">
+    <div class="col s12 center-align">
+      <h2 class="white-text">Empréstimo <strong>online</strong></h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s12 center-align">
+      <p class="grey-text lighten-1 flow-text msg-atrativa">Aproveite nosso empréstimo pessoal e consiga crédito
+        <strong>rápido</strong>
+        e
+        <strong>fácil</strong>.</p>
+
+      <p class="grey-text lighten-1 flow-text msg-atrativa">Faça sua simulação abaixo e bora resolver suas finanças!</p>
+    </div>
+  </div>
+
+  <div class="row center-align">
+    <div class="col s12 m12">
+      <div class="card white">
+        <div class="card-content white-text">
+          <span class="card-title ">De quanto você precisa?</span>
+
+          <ul class="row">
+            <li class="col s12 m4 item-lista-valores" *ngFor="let pacote of pacotesEmprestimo">
+              <a class=" btn-valores btn" [ngStyle]="{background:pacote.cor}" (click)="abrirForm(pacote )">
+                {{pacote.valor |currency:'BRL':'R$ ' }}</a>
+            </li>
+            <li class="col s12 m4 item-lista-valores"><a class=" btn-valores _white btn">Outros valor</a></li>
+          </ul>
+
+          <p class="grey-text">Mínimo de R$ 700 e máximo de R$ 20 mil com taxas a partir de <strong>2,97%</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s12">
+      <p class="center-align white-text">Ainda não é cliente? <a href="" class="white-text"><strong>Clique aqui e
+            cadastre</strong></a>.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s12">
+      <h2 class="white-text center-align">Como funciona?</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s12 m4 white-text">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid accusantium quisquam exercitationem ex
+        dolore, porro quasi eos est quaerat earum magnam vitae esse optio! Minus neque commodi totam laborum dolores!</p>
+    </div>
+
+    <div class="col s12 m4 white-text">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid accusantium quisquam exercitationem ex
+        dolore, porro quasi eos est quaerat earum magnam vitae esse optio! Minus neque commodi totam laborum dolores!</p>
+    </div>
+
+    <div class="col s12 m4 white-text">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid accusantium quisquam exercitationem ex
+        dolore, porro quasi eos est quaerat earum magnam vitae esse optio! Minus neque commodi totam laborum dolores!</p>
+    </div>
+  </div>
+
+  <div class="row bg-amarelo no-m-bottom">
+    <div class="col s12 m4 ">
+      <h6>Vantagem 1</h6>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid accusantium quisquam exercitationem ex
+        dolore, porro quasi eos est quaerat earum magnam vitae esse optio! Minus neque commodi totam laborum dolores!</p>
+    </div>
+
+    <div class="col s12 m4 ">
+      <h6>Vantagem 2</h6>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid accusantium quisquam exercitationem ex
+        dolore, porro quasi eos est quaerat earum magnam vitae esse optio! Minus neque commodi totam laborum dolores!</p>
+    </div>
+
+    <div class="col s12 m4 ">
+      <h6>Vantagem 3</h6>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid accusantium quisquam exercitationem ex
+        dolore, porro quasi eos est quaerat earum magnam vitae esse optio! Minus neque commodi totam laborum dolores!</p>
+    </div>
+
+  </div>
+
+  <div class="row white no-m-bottom">
+    <div class="col s12 m8">
+      <h3>Bora investir em você?</h3>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa pariatur optio nulla doloribus nostrum, rerum
+        odit sint libero voluptates aliquam ratione praesentium. Tenetur, nulla? Architecto optio iste soluta ipsum
+        perspiciatis.</p>
+    </div>
+    <div class="col s12 m4">
+      <div class="fake-img center-align">
+        <h3>fake image</h3>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row bg-amarelo">
+    <div class="col s12 ">
+      <h3>É tudo online!</h3>
+      <h6>Vem ca que te explico melhor.</h6>
+
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore doloribus ullam sapiente officiis, sint eum
+        necessitatibus quis illum ratione quae commodi, natus quas eligendi nisi deserunt praesentium adipisci
+        aliquid
+        ducimus?</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s12">
+      <img src="assets/img/logo.png" alt="Logo" class="logo">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s12 m4">
+      <ul class="">
+        <li><a href="" class="white-text">Lorem ipsum dolor sit</a></li>
+        <li><a href="" class="white-text">Lorem ipsum dolor sit</a></li>
+        <li><a href="" class="white-text">Lorem ipsum dolor sit</a></li>
+      </ul>
+    </div>
+    <div class="col s12 m4">
+      <ul class="center-align">
+        <li><a href="" class="white-text">Lorem ipsum dolor sit</a></li>
+        <li><a href="" class="white-text">Lorem ipsum dolor sit</a></li>
+        <li><a href="" class="white-text">Lorem ipsum dolor sit</a></li>
+      </ul>
+    </div>
+    <div class="col s12 m4">
+      <ul class="center-align">
+        <li><a href="" class="white-text">Lorem ipsum dolor sit</a></li>
+        <li><a href="" class="white-text">Lorem ipsum dolor sit</a></li>
+        <li><a href="" class="white-text">Lorem ipsum dolor sit</a></li>
+        <li><a href="" class="white-text">Lorem ipsum dolor sit</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s12 white-text">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius saepe hic maxime quo asperiores molestiae! Aut ipsa
+      est quaerat ullam quidem esse odio facere ab, pariatur at cumque necessitatibus amet.Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Eius saepe hic maxime quo asperiores molestiae! Aut ipsa
+      est quaerat ullam quidem esse odio facere ab, pariatur at cumque necessitatibus amet.Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Eius saepe hic maxime quo asperiores molestiae! Aut ipsa
+      est quaerat ullam quidem esse odio facere ab, pariatur at cumque necessitatibus amet.
+
+    </div>
+  </div>
+
+  <div class="row white-text">
+    <div class="col s12 m8">
+      BORACRED - Todos direitos Reservados
+    </div>
+    <div class="col s12 m2">
+      Política de privacidade
+    </div>
+    <div class="col s12 m2">
+      Termos de uso
+    </div>
+  </div>
+
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal" #modal>
+    <div *ngIf="pacoteSelecionado">
+      <div class="modal-content" [hidden]="formularioEnviado">
+        <h4 class="center-align">Formulário</h4>
+        <h6 class="center-align">Valor Selecionado: {{pacoteSelecionado.valor | currency:'BRL':'R$ ' }}</h6>
+
+        <form [formGroup]="formulario" ngNativeValidate (ngSubmit)="enviar(pacoteSelecionado.valor)">
+
+          <div>
+            <label for="nome">Nome:</label>
+            <input type="text" formControlName="nome" id="nome" required minlength="3">
+          </div>
+
+          <div>
+            <label id="email">Email:</label>
+            <input type="email" formControlName="email" id="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+          </div>
+
+          <div>
+            <label id="comentario">Comentário:</label>
+            <textarea type="tel" formControlName="comentario" id="comentario" required></textarea>
+          </div>
+
+          <div class="center-align">
+            <button type="submit" class="btn">Enviar</button>
+          </div>
+
+        </form>
+      </div>
+      <div class="modal-content" [hidden]="!formularioEnviado">
+        <h4>Solicitação Enviada com sucesso!</h4>
+      </div>
+    </div>
+
+  </div>
+
+</main>
